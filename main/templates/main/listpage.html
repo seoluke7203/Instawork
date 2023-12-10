@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>List Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/listpage.css' %}">
+</head>
+<body>
+    <div class = "card">
+        <div class = "title">
+            <button class = "add_button"><a href="addContact">&#43;</a></button>
+                <h1>Team members</h1>
+                {% if contactlist %}
+                <p class="count">You have {{ contactlist|length }} {% if contactlist|length == 1 %} member. {% else %} members. {%endif%}</p>
+        </div>
+    <table>
+        {% for list in contactlist %}
+        <tr onclick="location.href='{{list.pk}}'">
+            <tr onclick="location.href='{{ list.pk }}'">
+                <td class="avatar-cell">
+                    <img src="{% static 'images/default.png' %}" alt="default">
+                </td>
+                <td class="info-cell">
+                    <p class="name">{{ list.fname }} {{ list.lname }} {% if list.role == "admin"%} (admin) {%endif%}</p>
+                    <p>{{ list.phone }}</p>
+                    <p>{{ list.email }}</p>
+                </td>
+            </tr>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <p class="count">You have no members.</p>
+    {% endif%}
+    </table>
+
+    </div>
+</body>
+</html>

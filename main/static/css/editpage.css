@@ -1,0 +1,124 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    font-size: 50px;
+}
+
+p {
+    font-size: 30px;
+    color: grey;
+}
+
+form {
+    margin-top: 20px;
+}
+
+
+input[type="text"],
+input[type="email"]{
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 25px;
+    color: grey;
+}
+
+.subtitle{
+    font-size: 30px;
+    color: black;
+}
+
+.subtitle.role{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 25px;
+    line-height: 2rem;
+    padding: 0.2em 0.4em;
+}
+
+[type="radio"]:hover + span {
+      cursor: pointer;
+}
+
+.role_field label {
+    display: inline-block;
+    position: relative;
+    width: 90%;
+}
+
+.role_field span {
+    display: inline-block;
+    width: 80%;
+    cursor: pointer;
+}
+
+.role_field input[type="radio"] {
+    margin-left: 5%;
+    display: inline-block;
+    position: absolute;
+    top: auto;
+    left: 100%;
+    width: 1.2em;
+    height: 1.2em;
+    padding: 6px;
+    background-clip: content-box;
+    border: 2px solid #bbbbbb;
+    background-color: #e6e7e7;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.button_field{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input[type="submit"],button#delContact
+{
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 15px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+}
+
+button#delContact {
+    background-color: white;
+    color: red;
+    border: #bbbbbb 1px solid;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+
+
+}
+
+button#delContact:hover {
+    background-color: #bbbbbb;
+}
