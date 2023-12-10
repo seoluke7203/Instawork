@@ -21,19 +21,18 @@
         <p class="subtitle">Info</p>
         <form method="post" action="{% url 'addContact' %}">
             {% csrf_token %}
-            
             <input type="text" name="fname" placeholder="First Name" required><br>
             <input type="text" name="lname" placeholder="Last Name" required><br>
             <input type="email" name="email" placeholder="example@example.com" required oninput="hideErrorMessage()"><br>
+
             {% if error_Dup_Email %}
             <p id="error-message" style="color: red; font-size:15px;">The email already exists. Please try again with different email address.</p>
             {% endif %}
-    
+
             <input type="text" name="phone" placeholder="123-456-7890" required><br>
             
             <!-- Role Section -->
             <p class="subtitle role">Role</p>
-            
             <div class="role_field">
                 <label>
                     <span>Regular - Can't delete members</span>
@@ -41,7 +40,6 @@
                 </label>
             </div>
             <hr>
-            
             <div class="role_field">
                 <label>
                     <span>Admin - Can delete members</span>
@@ -49,12 +47,11 @@
                 </label>
             </div>
             <hr>
-            
             <input type="submit" value="Save">
         </form>
     </div>
 
-
+    <!-- Handling error message -->
     <script>
         function hideErrorMessage() {
             document.getElementById('error-message').style.display = 'none';
