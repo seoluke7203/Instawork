@@ -84,7 +84,7 @@ new_contact = List.objects.create(
 ```
 
 ## Views
-
+Intentionally utilized different methods to showcase my skills (Bootstrap, CSS, flexbox, floating, ...)
 ### 1. 'addContact' View
 #### Purpose
 The `addContact` view is responsible for rendering the form to add a new contact. It handles both GET and POST requests. In case of a POST request, it processes the form data, creates a new contact, and redirects the user to the list page. If the email already exists, it displays an error message on the form.
